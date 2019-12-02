@@ -1,2 +1,5 @@
-# virtual-try-on-ring
-Recognition mainly focused on co-ordinates of each finger of a hand, where ring can be worn, for imp
+Overview: Recognition mainly focused on co-ordinates of each finger of a hand, where ring can be worn, for implementing try-on feature. For achieving this accurately, I have considered to take two end corners and mid-points of each finger.  That means I will conclude it with three sets of co-ordinate points for each finger. Mathematical concepts like shapes and co-ordinate geometry are used. Tools primarily used are Python OpenCV and Jupyter Notebook. 
+Notes:
+Contours: The contour of hand is a series of points which are the boundary pixels of the hand area.
+Convex hull: The convex hull of hand contour is the convex polygon surrounded by all the convex vertices in hand contour.
+Convex defects: The convex defect is defined as the difference between convex hull and contour of a hand, they are contained in the convex hull but not hand area. Most probably the space between fingers could be the convexity defects. The data structure of each of the convex defects contains three components: start contour point (starting point of defect), end contour point (termination point of defect) and concave contour point (furthest point away from the convex hull and the furthest distance is the depth of convex defect). 
